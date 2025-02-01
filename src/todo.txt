@@ -1,0 +1,6 @@
+1. Make Quiz Ui first. 👍
+2.Apply Css 👍
+3.Fetching Data Dynamically.
+4. Displaying Data on UI
+5.Write logic for questions tab change
+6. Displaying Correct/Incorrect Answer
