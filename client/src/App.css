@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(27, 167, 248);
+}
+.app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.quiz {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.quiz h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quiz-question p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: 1rem;
+  animation: slideIn 0.6s ease-in-out;
+}
+
+.options-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options-container li {
+  padding: 12px 18px;
+  background-color: #f1f3f5;
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+  color: #2d3436;
+}
+
+.options-container li:hover {
+  background-color: #d0ebff;
+  transform: scale(1.02);
+}
+
+.options-container li.correct {
+  background-color: #2ecc71 !important;
+  color: white;
+}
+
+.options-container li.wrong {
+  background-color: #e74c3c !important;
+  color: white;
+}
+
+.result p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #27ae60;
+  text-align: center;
+}
+
+.reset-btn,
+.next-btn {
+  align-self: center;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover,
+.next-btn:hover {
+  background-color: #2980b9;
+}
+
+.correct-answer {
+  color: #27ae60;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-weight: 500;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

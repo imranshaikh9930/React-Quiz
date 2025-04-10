@@ -16,9 +16,9 @@ app.use((req, res, next) => {
 app.get('/', async (req, res) => {
   try {
     const response = await axios.get('https://api.jsonserve.com/Uw5CrX');
-    res.json(response.data);
+    res.status(200).json(response.data);
   } catch (error) {
-    res.status(500).send('Error fetching data',error);
+    res.status(500).json({ message: 'Error fetching data', error: error.message });
   }
 });
 
